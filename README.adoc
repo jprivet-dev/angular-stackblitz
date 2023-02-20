@@ -96,11 +96,54 @@ image::doc/welcome.png[]
 
 {back_to_top}
 
-== Launching project in StackBlitz
+== StackBlitz
+
+=== Launching the project
 
 image:https://developer.stackblitz.com/img/open_in_stackblitz.svg[Open in StackBlitz,link={stackblitz_from_github}]
 
 NOTE: More information on https://developer.stackblitz.com/guides/integration/open-from-github
+
+{back_to_top}
+
+=== Avoid error with `zone.js`
+
+Angular CLI generate the following file without `zone.js`:
+
+.main.ts
+```typescript
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+```
+
+Locally everything works fine with `$ ng serve`, but this creates the following error in StackBlitz:
+
+```
+Error: NG0908: In this configuration Angular requires Zone.js
+```
+
+image::doc/stackblitz-zone-error.png[]
+
+So to fix this, we have to import `zone.js` in `main.ts`:
+
+.main.ts
+```typescript
+import 'zone.js/dist/zone'; // Avoid error in StackBlitz
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+
+import { AppModule } from './app/app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err));
+```
+
+image::doc/stackblitz-zone-ok.png[]
+
+NOTE: More information on https://github.com/manfredsteyer/ngx-build-plus/issues/4#issuecomment-613988290
 
 {back_to_top}
 
