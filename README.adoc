@@ -23,20 +23,34 @@ endif::[]
 :git_username: jprivet-dev
 :git_url: https://github.com/{git_username}/{git_project}
 :git_clone_ssh: git@github.com:{git_username}/{git_project}.git
+:stackblitz_from_github: https://stackblitz.com/github/{git_username}/{git_project}/tree/main
 
 // Releases
 :project_release: v0.0.0-beta.0
+:node_release: v18.13.0
+:npm_release: 8.19.3
+:angular_release: 15.1.5
 
 [#{back_to_top_target}]
 = {main_title}
 
 image:https://badgen.net/badge/release/{project_release}/blue[Project release,link={git_url}/releases/tag/{project_release}]
+image:https://badgen.net/badge/angular/{angular_release}/d93630[Angular release,link=https://github.com/angular/angular/releases/tag/{angular_release}]
+image:https://developer.stackblitz.com/img/open_in_stackblitz_small.svg[Open in StackBlitz,link={stackblitz_from_github}]
 
 toc::[]
 
 == Presentation
 
 Sandbox to locally generate a project with Angular CLI and launch it online in StackBlitz.
+
+|===
+| Label | Version
+
+| node | {node_release}
+| npm | {npm_release}
+| Angular | {angular_release}
+|===
 
 {back_to_top}
 
@@ -54,14 +68,7 @@ More information on:
 * Node: https://nodejs.org/en/download
 ====
 
-In my case, I used Node in KDE Neon (see https://github.com/nodejs/snap):
-
-```
-$ node --version
-v18.13.0
-$ npm --version
-8.19.3
-```
+In my case, I used Node in KDE Neon (see https://github.com/nodejs/snap).
 
 {back_to_top}
 
@@ -87,9 +94,11 @@ NOTE: More information on https://angular.io/cli
 
 {back_to_top}
 
-== Resources
+== Launching project in StackBlitz
 
-* https://developer.stackblitz.com/guides/integration/open-from-github
+image:https://developer.stackblitz.com/img/open_in_stackblitz.svg[Open in StackBlitz,link={stackblitz_from_github}]
+
+NOTE: More information on https://developer.stackblitz.com/guides/integration/open-from-github
 
 {back_to_top}
 
