@@ -74,7 +74,7 @@ In my case, I used Node in KDE Neon (see https://github.com/nodejs/snap).
 
 === Install a global Angular CLI (optional)
 
-If you want to regenerate step by step a new Angular project, you will need to install/update a global Angular CLI:
+If you want to regenerate a new Angular project, you will need to install/update a global Angular CLI:
 
 ```
 $ npm install -g @angular/cli
@@ -101,6 +101,24 @@ image::doc/welcome.png[]
 image:https://developer.stackblitz.com/img/open_in_stackblitz.svg[Open in StackBlitz,link={stackblitz_from_github}]
 
 NOTE: More information on https://developer.stackblitz.com/guides/integration/open-from-github
+
+{back_to_top}
+
+== Semantic Versioning
+
+NOTE: Based on https://semver.org/
+
+```
+v[MAJOR].[ANGULAR_VERSION].[MINOR].[PATCH]
+
+With [ANGULAR_VERSION] = [ANGULAR MAJOR + ANGULAR MINOR]
+```
+
+Example, with `v1` of this repository with `Angular 15.1.6`:
+
+```
+v1.1501.0.0
+```
 
 {back_to_top}
 
