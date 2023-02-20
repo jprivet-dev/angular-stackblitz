@@ -58,7 +58,7 @@ Sandbox to locally generate a project with Angular CLI and launch it online in S
 
 === Install NVM or Node
 
-To lauch locally that project, you will need to install NVM (Node Version Manager) or Node.
+To launch locally that project, you will need to install NVM (Node Version Manager) or Node.
 
 [NOTE]
 ====
@@ -108,7 +108,7 @@ NOTE: More information on https://developer.stackblitz.com/guides/integration/op
 
 === Avoid error with `zone.js`
 
-Angular CLI generates the following file without `zone.js`:
+Angular CLI generates the `main.ts` file without `zone.js`:
 
 .main.ts
 ```typescript
@@ -128,7 +128,7 @@ Error: NG0908: In this configuration Angular requires Zone.js
 
 image::doc/stackblitz-zone-error.png[]
 
-So to fix this, we have to import `zone.js` in `main.ts`:
+So to fix this, I have to import `zone.js` in `main.ts`:
 
 .main.ts
 ```typescript
@@ -141,9 +141,17 @@ platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
 ```
 
+After that, everything worked perfectly!
+
 image::doc/stackblitz-zone-ok.png[]
 
-NOTE: More information on https://github.com/manfredsteyer/ngx-build-plus/issues/4#issuecomment-613988290
+[NOTE]
+====
+More information on:
+
+* https://github.com/manfredsteyer/ngx-build-plus/issues/4#issuecomment-613988290
+* https://github.com/jprivet-dev/angular-stackblitz
+====
 
 {back_to_top}
 
