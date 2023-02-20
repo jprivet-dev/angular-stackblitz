@@ -58,7 +58,7 @@ Sandbox to locally generate a project with Angular CLI and launch it online in S
 
 === Install NVM or Node
 
-To lauch locally that project, you will need to install NVM (Node Version Manager) or Node.
+To launch locally that project, you will need to install NVM (Node Version Manager) or Node.
 
 [NOTE]
 ====
