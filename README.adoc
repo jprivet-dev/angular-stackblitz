@@ -1,0 +1,108 @@
+:toc: macro
+:toc-title: Summary
+:toclevels: 3
+:numbered:
+
+ifndef::env-github[:icons: font]
+ifdef::env-github[]
+:status:
+:outfilesuffix: .adoc
+:caution-caption: :fire:
+:important-caption: :exclamation:
+:note-caption: :paperclip:
+:tip-caption: :bulb:
+:warning-caption: :warning:
+endif::[]
+
+:back_to_top_target: top-target
+:back_to_top_label: ⬆ Back to top
+:back_to_top: <<{back_to_top_target},{back_to_top_label}>>
+
+:main_title: Angular & StackBlitz
+:git_project: angular-stackblitz
+:git_username: jprivet-dev
+:git_url: https://github.com/{git_username}/{git_project}
+:git_clone_ssh: git@github.com:{git_username}/{git_project}.git
+
+// Releases
+:project_release: v0.0.0-beta.0
+
+[#{back_to_top_target}]
+= {main_title}
+
+image:https://badgen.net/badge/release/{project_release}/blue[Project release,link={git_url}/releases/tag/{project_release}]
+
+toc::[]
+
+== Presentation
+
+Sandbox to locally generate a project with Angular CLI and launch it online in StackBlitz.
+
+{back_to_top}
+
+== Prerequisites
+
+=== Install NVM or Node
+
+To lauch locally that project, you will need to install NVM (Node Version Manager) or Node.
+
+[NOTE]
+====
+More information on:
+
+* NVM: https://github.com/nvm-sh/nvm
+* Node: https://nodejs.org/en/download
+====
+
+In my case, I used Node in KDE Neon (see https://github.com/nodejs/snap):
+
+```
+$ node --version
+v18.13.0
+$ npm --version
+8.19.3
+```
+
+{back_to_top}
+
+=== Install a global Angular CLI (optional)
+
+If you want to regenerate step by step a new Angular project, you will need to install/update a global Angular CLI:
+
+```
+$ npm install -g @angular/cli
+```
+
+NOTE: More information on https://angular.io/cli
+
+{back_to_top}
+
+== Installation
+
+. `$ git clone {git_clone_ssh}`
+. `$ cd {git_project}`
+. `$ npm install`
+. `$ ng serve`
+. Open your browser on http://localhost:4200/
+
+{back_to_top}
+
+== Resources
+
+* https://developer.stackblitz.com/guides/integration/open-from-github
+
+{back_to_top}
+
+== Comments, suggestions?
+
+Feel free to make comments/suggestions to me in the {git_url}/issues[Git issues section].
+
+{back_to_top}
+
+== License
+
+"{main_title}" is released under the {git_url}/blob/main/LICENSE[*MIT License*]
+
+---
+
+{back_to_top}
