@@ -108,7 +108,7 @@ NOTE: More information on https://developer.stackblitz.com/guides/integration/op
 
 === Avoid error with `zone.js`
 
-Angular CLI generate the following file without `zone.js`:
+Angular CLI generates the following file without `zone.js`:
 
 .main.ts
 ```typescript
