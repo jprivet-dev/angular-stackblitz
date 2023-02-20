@@ -92,6 +92,8 @@ NOTE: More information on https://angular.io/cli
 . `$ ng serve`
 . Open your browser on http://localhost:4200/
 
+image::doc/welcome.png[]
+
 {back_to_top}
 
 == Launching project in StackBlitz
